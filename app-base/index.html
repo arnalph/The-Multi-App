@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://kit.fontawesome.com/660b1e14f6.js" crossorigin="anonymous"></script>
+<style>
+</style>
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+  <a class="closebtn" onclick="closeNav()">&times;</a>
+  <input type="search" placeholder="Search...">
+  <a onclick="changeURL('calculator/calc.html')"><i class="fas fa-calculator"></i> Calculator</a>
+  <a onclick="changeURL('dayplanner/dayplanner.html')"><i class="far fa-calendar-alt"></i> Day Planner</a>
+  <a onclick="changeURL('todo-js/index.html')"><i class="fas fa-list-alt"></i> Todos</a>
+  <a onclick="changeURL('weather-app/weather-app.html')"><i class="fas fa-cloud-sun-rain"></i> Weather</a>
+  <a onclick="changeURL('https://ssltvc.forexprostools.com/?pair_ID=160&height=600&width=1400&interval=86400&plotStyle=candle&domain_ID=56&lang_ID=56&timezone_ID=0','url')"><i class="fas fa-chart-area"></i> Trading Charts</a>
+  <a onclick="changeURL('budgeter/index.html')"><i class="fas fa-hand-holding-usd"></i> Budget Tracker</a>
+</div>
+
+<div class="navbar">
+  <a class="icon" onclick="openNav()">
+    &#9776;
+  </a>
+</div>
+<div class="main" id="main">
+	<iframe src="apps/todo-js/index.html" id='html-frame' allow='geolocation https://ssltvc.forexprostools.com'></iframe>
+</div>
+<noscript>
+  This site needs Javascript enabled to run properly.
+</noscript>
+<script src="js/script.js">
+</script>
+</body>
+</html>
+
