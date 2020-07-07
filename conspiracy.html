@@ -1,0 +1,74 @@
+<html>
+<title>REVEALED: Japan's Negligence Causes Mudslides</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@700&display=swap');
+body{
+margin-left:15%;
+margin-right: 15%;
+}
+img{
+width: 100%;
+height: auto;
+}
+.title,a{
+font-size:325%;
+color:#000;
+font-family: Antique-Book;
+text-decoration: none;
+}
+p{
+font-family: 'News Cycle', sans-serif;
+font-size: 125%;
+}
+@font-face {
+  font-family: Antique-Book;
+  src: url("Antique Book Cover.otf");
+}
+.authors{
+text-align:left;
+font-family: 'News Cycle', sans-serif;
+font-size: 110%;
+}
+.date{
+font-family: 'News Cycle', sans-serif;
+font-size: 110%;
+text-align:right;
+}
+</style>
+<body onload="loadXMLDoc()">
+<center><a href="#"><h1 class="title" style="">The Weekly Ledger</h1></a></center>
+<h1 style="font-family: 'News Cycle', sans-serif;"><b>REVEALED: Rescuers search for survivors of Japan floods as more heavy rain expected</b></h1>
+<h3 style="font-family: 'News Cycle', sans-serif;">At least 50 people have been killed after the river Kuma in Kyushu burst its banks, triggering floods and mudslides. Could this be due to negligent behaviour?
+</h3>
+<h5><span class="authors">By Arnav K., Chief Editor&nbsp; |  &nbsp;</span>
+<span class="date">7th July, 2020</span></h5>
+<p>
+<center><img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/07/06/11/japan-mudslide.jpg?w968"></center>
+<div class="report">
+<!--<p>The Weekly Ledger has been conducting thorough investigations of this devastating incident.</p>
+<p>The Kyodo news agency said 40 people had died in the floods and at least 11 were missing. Among the dead were 14 residents of an elderly care home in Kuma village, Kumamoto, where the nearby Kuma river flooded. More torrential rain is forecast for coming days. </p>
+<p>Research has long shown that dam building can aggravate damages caused by floods. The river Kuma also has a dam, the Arase Dam, built in 1951.</p>
+<p>We are conducting further research regarding these floods and would urge the concerned authorities to come out with the truth as to whether these floods were caused by negligence and could the presence of the Arase dam have aggravated the situation.</p>
+<p>We have our deepest condolences to those who have had to face much pain due these floods and shall continue in our commitment to provide people with true information.</p>-->
+</div>
+<script>
+function loadXMLDoc() {
+  var xmlhttp;
+  if (window.XMLHttpRequest) {
+    xmlhttp = new XMLHttpRequest();
+  } else {
+    // code for older browsers
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("report").innerHTML =
+      this.responseText;
+    }
+  };
+  xmlhttp.open("GET", "report.txt", true);
+  xmlhttp.send();
+}
+</script>
+</body>
+</html>
