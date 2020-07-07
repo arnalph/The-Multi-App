@@ -36,15 +36,15 @@ text-align:right;
 }
 </style>
 <body onload="loadXMLDoc()">
-<center><a href="#"><h1 class="title" style="">The Weekly Ledger</h1></a></center>
-<h1 style="font-family: 'News Cycle', sans-serif;"><b>REVEALED: Rescuers search for survivors of Japan floods as more heavy rain expected</b></h1>
-<h3 style="font-family: 'News Cycle', sans-serif;">At least 50 people have been killed after the river Kuma in Kyushu burst its banks, triggering floods and mudslides. Could this be due to negligent behaviour?
+<center><a href="#"><h1 class="title">The Weekly Ledger</h1></a></center>
+<h1 style="font-family: 'News Cycle', sans-serif;" id="post:title"><b><!--REVEALED: Rescuers search for survivors of Japan floods as more heavy rain expected--></b></h1>
+<h3 style="font-family: 'News Cycle', sans-serif;" id="post:subtitle"><!--At least 50 people have been killed after the river Kuma in Kyushu burst its banks, triggering floods and mudslides. Could this be due to negligent behaviour?-->
 </h3>
-<h5><span class="authors">By Arnav K., Chief Editor&nbsp; |  &nbsp;</span>
-<span class="date">7th July, 2020</span></h5>
+<h5><span class="authors" id="post:author"><!--By Arnav K., Chief Editor--></span>&nbsp; |  &nbsp;
+<span class="date" id="post:date"><!--7th July, 2020--></span></h5>
 <p>
-<center><img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/07/06/11/japan-mudslide.jpg?w968"></center>
-<div class="report" id="report">
+<center><img id="post:heroimg" src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/07/06/11/japan-mudslide.jpg?w968"></center>
+<div class="report">
 <!--<p>The Weekly Ledger has been conducting thorough investigations of this devastating incident.</p>
 <p>The Kyodo news agency said 40 people had died in the floods and at least 11 were missing. Among the dead were 14 residents of an elderly care home in Kuma village, Kumamoto, where the nearby Kuma river flooded. More torrential rain is forecast for coming days. </p>
 <p>Research has long shown that dam building can aggravate damages caused by floods. The river Kuma also has a dam, the Arase Dam, built in 1951.</p>
@@ -62,8 +62,20 @@ function loadXMLDoc() {
   }
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
+	var resp = JSON.parse(this.responseText)
+	
       document.getElementById("report").innerHTML =
-      this.responseText;
+      resp.report;
+	  document.getElementById("post:title").innerHTML =
+      resp.title;
+	  document.getElementById("post:subtitle").innerHTML =
+      resp.subtitle;
+	  document.getElementById("post:author").innerHTML =
+      resp.author;
+	  document.getElementById("post:date").innerHTML =
+      resp.date;
+	  document.getElementById("post:heroimg").innerHTML =
+      resp.heroimg;
     }
   };
   xmlhttp.open("GET", "report.txt", true);
