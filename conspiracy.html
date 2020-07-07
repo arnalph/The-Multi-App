@@ -62,7 +62,7 @@ function loadXMLDoc() {
   }
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-	var resp = this.responseText.innerText
+	var resp = this.responseText
 	console.log(resp);
 	
       /*document.getElementById("report").innerHTML =
