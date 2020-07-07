@@ -62,9 +62,10 @@ function loadXMLDoc() {
   }
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-	var resp = JSON.parse(this.responseText.innerText)
+	var resp = this.responseText.innerText
+	console.log(resp);
 	
-      document.getElementById("report").innerHTML =
+      /*document.getElementById("report").innerHTML =
       resp.report;
 	  document.getElementById("post:title").innerHTML =
       resp.title;
@@ -75,7 +76,7 @@ function loadXMLDoc() {
 	  document.getElementById("post:date").innerHTML =
       resp.date;
 	  document.getElementById("post:heroimg").innerHTML =
-      resp.heroimg;
+      resp.heroimg;*/
     }
   };
   xmlhttp.open("GET", "report.txt", true);
