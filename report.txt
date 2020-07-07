@@ -1,8 +1,8 @@
-{
+<text>{
 "title": "REVEALED: Rescuers search for survivors of Japan floods as more heavy rain expected";
 "date": "7th July, 2020";
 "author":"By Arnav K., Chief Editor";
 "report":"<p>The Weekly Ledger has been conducting thorough investigations of this devastating incident.</p><p>The Kyodo news agency said 40 people had died in the floods and at least 11 were missing. Among the dead were 14 residents of an elderly care home in Kuma village, Kumamoto, where the nearby Kuma river flooded. More torrential rain is forecast for coming days. </p><p>Research has long shown that dam building can aggravate damages caused by floods. The river Kuma also has a dam, the Arase Dam, built in 1951.</p><p>We are conducting further research regarding these floods and would urge the concerned authorities to come out with the truth as to whether these floods were caused by negligence and could the presence of the Arase dam have aggravated the situation.</p><p>We have our deepest condolences to those who have had to face much pain due these floods and shall continue in our commitment to provide people with true information.</p>";
 "subtitle": "At least 50 people have been killed after the river Kuma in Kyushu burst its banks, triggering floods and mudslides. Could this be due to negligent behaviour?";
 "heroimg": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/07/06/11/japan-mudslide.jpg?w968"
-}
+}</text>
