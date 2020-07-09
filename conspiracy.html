@@ -66,19 +66,18 @@ function loadXMLDoc() {
 	console.log(resp);
 	document.getElementById("response").innerHTML = resp;
 	var data = JSON.parse(document.getElementById("JSON").innerHTML);
-	    console.log(data.title)
-      /*document.getElementById("report").innerHTML =
-      resp.report;
+      document.getElementById("report").innerHTML =
+      data.report;
 	  document.getElementById("post:title").innerHTML =
-      resp.title;
+      data.title;
 	  document.getElementById("post:subtitle").innerHTML =
-      resp.subtitle;
+      data.subtitle;
 	  document.getElementById("post:author").innerHTML =
-      resp.author;
+      data.author;
 	  document.getElementById("post:date").innerHTML =
-      resp.date;
+      data.date;
 	  document.getElementById("post:heroimg").innerHTML =
-      resp.heroimg;*/
+      data.heroimg;
     }
   };
   xmlhttp.open("GET", "report.txt", true);
