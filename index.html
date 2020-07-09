@@ -52,6 +52,8 @@ text-align:right;
 <p>We have our deepest condolences to those who have had to face much pain due these floods and shall continue in our commitment to provide people with true information.</p>-->
 </div>
 <script>
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
 function loadXMLDoc() {
   var xmlhttp;
   if (window.XMLHttpRequest) {
@@ -80,7 +82,7 @@ function loadXMLDoc() {
       data.heroimg;
     }
   };
-  xmlhttp.open("GET", "report.txt", true);
+  xmlhttp.open("GET", urlParams.get("postid")+".txt", true);
   xmlhttp.send();
 }
 </script>
