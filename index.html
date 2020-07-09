@@ -43,7 +43,7 @@ text-align:right;
 <h5><span class="authors" id="post:author"><!--By Arnav K., Chief Editor--></span>&nbsp; |  &nbsp;
 <span class="date" id="post:date"><!--7th July, 2020--></span></h5>
 <p>
-<center><img id="post:heroimg" src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/07/06/11/japan-mudslide.jpg?w968"></center>
+<center><img id="post:heroimg" src=""></center>
 <div class="report" id="report">
 <!--<p>The Weekly Ledger has been conducting thorough investigations of this devastating incident.</p>
 <p>The Kyodo news agency said 40 people had died in the floods and at least 11 were missing. Among the dead were 14 residents of an elderly care home in Kuma village, Kumamoto, where the nearby Kuma river flooded. More torrential rain is forecast for coming days. </p>
@@ -78,7 +78,7 @@ function loadXMLDoc() {
       data.author;
 	  document.getElementById("post:date").innerHTML =
       data.date;
-	  document.getElementById("post:heroimg").innerHTML =
+	  document.getElementById("post:heroimg").src =
       data.heroimg;
     }
   };
