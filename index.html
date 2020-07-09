@@ -1,5 +1,5 @@
 <html>
-<title id="post:toptitle">REVEALED: Japan's Negligence Causes Mudslides</title>
+<title id="post:toptitle">The Weekly Ledger</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@700&display=swap');
 body{
@@ -62,6 +62,7 @@ function loadXMLDoc() {
     // code for older browsers
     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
   }
+try{
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
 	var resp = this.responseText
@@ -83,7 +84,10 @@ function loadXMLDoc() {
 	  document.getElementById("post:toptitle").src =
       data.title+"-The Weekly Herald";
     }
-  };
+  }}except{
+	  document.getElementById("post:title").innerHTML =
+      "Sorry, There was an error.";
+  }
   xmlhttp.open("GET", urlParams.get("postid")+".txt", true);
   xmlhttp.send();
 }
