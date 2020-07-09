@@ -64,7 +64,9 @@ function loadXMLDoc() {
     if (this.readyState == 4 && this.status == 200) {
 	var resp = this.responseText
 	console.log(resp);
-	
+	document.getElementById("response").innerHTML = resp;
+	var data = JSON.parse(document.getElementById("JSON").innerHTML);
+	    console.log(data.title)
       /*document.getElementById("report").innerHTML =
       resp.report;
 	  document.getElementById("post:title").innerHTML =
@@ -83,5 +85,7 @@ function loadXMLDoc() {
   xmlhttp.send();
 }
 </script>
+	<div hidden id="response">
+	</div>
 </body>
 </html>
