@@ -82,15 +82,16 @@ function loadXMLDoc() {
       data.heroimg;
 	  document.getElementById("post:toptitle").src =
       data.title+"-The Weekly Herald";
+    }if (this.readyState == 4 && this.status == 404){
+    	document.getElementById("post:title").innerHTML =
+      "Sorry, There was an error";
+	    document.getElementById("post:heroimg").hidden="true";
     }
   };
 
   xmlhttp.open("GET", urlParams.get("postid")+".txt", true);
-	try{
-  xmlhttp.send();}catch(err){
-	  document.getElementById("post:title").innerHTML =
-      "Sorry, There was an error.";
-  }
+  xmlhttp.send();
+	  
 }
 </script>
 	<div hidden id="response">
