@@ -1,5 +1,5 @@
 <html>
-<title>REVEALED: Japan's Negligence Causes Mudslides</title>
+<title id="post:toptitle">REVEALED: Japan's Negligence Causes Mudslides</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@700&display=swap');
 body{
@@ -80,6 +80,8 @@ function loadXMLDoc() {
       data.date;
 	  document.getElementById("post:heroimg").src =
       data.heroimg;
+	  document.getElementById("post:toptitle").src =
+      data.title+"-The Weekly Herald";
     }
   };
   xmlhttp.open("GET", urlParams.get("postid")+".txt", true);
