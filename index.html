@@ -62,7 +62,6 @@ function loadXMLDoc() {
     // code for older browsers
     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
   }
-try{
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
 	var resp = this.responseText
@@ -84,12 +83,13 @@ try{
 	  document.getElementById("post:toptitle").src =
       data.title+"-The Weekly Herald";
     }
-  }}catch(err){
+  };
+try{
+  xmlhttp.open("GET", urlParams.get("postid")+".txt", true);
+  xmlhttp.send();}catch(err){
 	  document.getElementById("post:title").innerHTML =
       "Sorry, There was an error.";
   }
-  xmlhttp.open("GET", urlParams.get("postid")+".txt", true);
-  xmlhttp.send();
 }
 </script>
 	<div hidden id="response">
