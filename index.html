@@ -84,8 +84,9 @@ function loadXMLDoc() {
       data.title+"-The Weekly Herald";
     }
   };
-try{
+
   xmlhttp.open("GET", urlParams.get("postid")+".txt", true);
+	try{
   xmlhttp.send();}catch(err){
 	  document.getElementById("post:title").innerHTML =
       "Sorry, There was an error.";
