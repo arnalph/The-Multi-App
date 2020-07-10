@@ -56,7 +56,7 @@ function loadXMLDoc() {
 		var link = document.createElement('a')
 		link.innerHTML = json.post[i].title;
 		link.href = "/post.html?postid="+json.post[i].slug
-		document.getElementById('root').appendChild(link)
+		document.getElementById('root').appendChild(link+"<br>")
 	}
     }if (this.readyState == 4 && this.status == 404){
     	console.log(" There was an error ")
