@@ -89,7 +89,7 @@ function loadXMLDoc() {
     }
   };
 
-  xmlhttp.open("GET", urlParams.get("postid")+".txt", true);
+  xmlhttp.open("GET", "posts/"+urlParams.get("postid")+".txt", true);
   xmlhttp.send();
 	  
 }
