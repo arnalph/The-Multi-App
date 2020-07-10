@@ -2,8 +2,6 @@
 <body onload="loadXMLDoc()">
 <div id="root"></div>
 <script>
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
 function loadXMLDoc() {
   var xmlhttp;
   if (window.XMLHttpRequest) {
@@ -15,11 +13,10 @@ function loadXMLDoc() {
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
 	var resp = this.responseText
-	document.getElementById("root").innerHTML = resp;
+	var json = JSON.parse(resp)
+	document.getElementById("root").innerHTML = json.post.title;
 	}if (this.readyState == 4 && this.status == 404){
-    	document.getElementById("post:title").innerHTML =
-      "Sorry, There was an error";
-	    document.getElementById("post:heroimg").hidden="true";
+    	console.log("")
     }
   };
 
