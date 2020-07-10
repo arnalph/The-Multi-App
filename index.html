@@ -53,8 +53,8 @@ function loadXMLDoc() {
 	var resp = this.responseText
 	var json = JSON.parse(resp)
 	var link = document.createElement('a')
-	link.innerHTML = json.post.title;
-	link.href = "/post.html?postid="+json.post.slug
+	link.innerHTML = json.post[1].title;
+	link.href = "/post.html?postid="+json.post[1].slug
 	    document.getElementById('root').appendChild(link)
 	}if (this.readyState == 4 && this.status == 404){
     	console.log("")
