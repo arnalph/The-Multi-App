@@ -40,6 +40,7 @@ text-align:right;
 <div id="root">
 	</div>
 <script>
+	var js;
 function loadXMLDoc() {
   var xmlhttp;
   if (window.XMLHttpRequest) {
@@ -52,6 +53,7 @@ function loadXMLDoc() {
     if (this.readyState == 4 && this.status == 200) {
 	var resp = this.responseText
 	var json = JSON.parse(resp)
+	js=json
 	var link = document.createElement('a')
 	link.innerHTML = json.post[1].title;
 	link.href = "/post.html?postid="+json.post[1].slug
