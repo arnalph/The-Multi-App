@@ -54,15 +54,14 @@ function loadXMLDoc() {
 	var json = JSON.parse(resp)
 	for(var i=0;i<json.post.length;i++){
 		var link = document.createElement('a')
-		link.innerHTML = json.post[i].title;
+		link.innerHTML = "<h3>"+json.post[i].title+"</h3>";
 		link.href = "/post.html?postid="+json.post[i].slug
-		document.getElementById('root').appendChild(link+"<br>")
+		document.getElementById('root').appendChild(link)
 	}
     }if (this.readyState == 4 && this.status == 404){
     	console.log(" There was an error ")
     }
   };
-
   xmlhttp.open("GET", "posts.json", true);
   xmlhttp.send();
 }
