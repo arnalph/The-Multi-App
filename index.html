@@ -1,0 +1,31 @@
+<html>
+<body>
+<div id="root"></div>
+<script>
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+function loadXMLDoc() {
+  var xmlhttp;
+  if (window.XMLHttpRequest) {
+    xmlhttp = new XMLHttpRequest();
+  } else {
+    // code for older browsers
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+	var resp = this.responseText
+	document.getElementById("root").innerHTML = resp;
+	}if (this.readyState == 4 && this.status == 404){
+    	document.getElementById("post:title").innerHTML =
+      "Sorry, There was an error";
+	    document.getElementById("post:heroimg").hidden="true";
+    }
+  };
+
+  xmlhttp.open("GET", "posts.json", true);
+  xmlhttp.send();
+}
+</script>
+</body>
+</html>
