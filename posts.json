@@ -1,8 +1,14 @@
 {
-"post": {
+"post": [{
     "title": "REVEALED: Rescuers search for survivors of Japan floods as more heavy rain expected",
     "date": "7th July, 2020",
     "author":"By Arnav K., Chief Editor",
     "slug": "rescuers-japan-floods"
-    }
+    },
+        {
+    "title": "REVEALED: Rescuers search for survivors of China floods as more heavy rain expected",
+    "date": "12th July, 2020",
+    "author":"By Yash S., Deputy Chief Editor",
+    "slug": "rescuers-china-floods"
+    }]
 }
