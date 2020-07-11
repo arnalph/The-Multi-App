@@ -10,12 +10,6 @@ img{
 width: 100%;
 height: auto;
 }
-h3 img{
-display: block;
-margin-left: auto;
-  margin-right: auto;
-  width:auto;
-}
 .title,#headhref{
 font-size:325%;
 color:#000;
@@ -35,10 +29,22 @@ text-align:left;
 font-family: 'News Cycle', sans-serif;
 font-size: 110%;
 }
+hr{
+	color:black;
+	height:1px;
+	border: none;
+	background: black;
+}
 .date{
 font-family: 'News Cycle', sans-serif;
 font-size: 110%;
 text-align:right;
+}
+h3 img{
+display: block;
+margin-left: auto;
+  margin-right: auto;
+  width:auto;
 }
 </style>
 <body onload="loadXMLDoc()">
@@ -64,6 +70,7 @@ function loadXMLDoc() {
 		link.innerHTML = "<h3>"+'<img src='+json.post[i].heroimg+'">'+"<br>"+json.post[i].title+"</h3>";
 		link.href = "/post.html?postid="+json.post[i].slug
 		document.getElementById('root').appendChild(link)
+		document.getElementById('root').innerHTML += "<hr>"
 	}
     }if (this.readyState == 4 && this.status == 404){
     	console.log(" There was an error ")
