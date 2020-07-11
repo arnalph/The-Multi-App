@@ -10,6 +10,12 @@ img{
 width: 100%;
 height: auto;
 }
+h3 img{
+display: block;
+margin-left: auto;
+  margin-right: auto;
+  width:auto;
+}
 .title,#headhref{
 font-size:325%;
 color:#000;
@@ -55,7 +61,7 @@ function loadXMLDoc() {
 	for(var i=0;i<json.post.length;i++){
 		var link = document.createElement('a')
 		link.style="color:black;text-decoration:none;"
-		link.innerHTML = "<h3>"+json.post[i].title+"</h3>";
+		link.innerHTML = "<h3>"+'img src='+json.post[i].heroimg+'">'+"<br>"+json.post[i].title+"</h3>";
 		link.href = "/post.html?postid="+json.post[i].slug
 		document.getElementById('root').appendChild(link)
 	}
